@@ -1,0 +1,36 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Shulker Studios Addon (BP)",
+    "description": "Auto-generated Bedrock Script API system for Shulker Studio",
+    "uuid": "e74f1b8a-9cd2-43c2-bf72-de36e921b7c2",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      120
+    ]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "uuid": "c2cf47e9-a29d-43c2-bf72-de36e921b7d5",
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "beta"
+    }
+  ]
+}

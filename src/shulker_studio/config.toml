@@ -1,0 +1,23 @@
+# Shulker Studio Configuration File
+
+# Automatically manage deployment of behavior/resource packs on start
+autoDeployAddons = true
+
+# Folder destinations for deployment
+deployToDevelopmentFolders = true
+deployToProductionFolders = false
+
+# Enable file watching for script changes to auto-redeploy during server runtime
+developmentMode = true
+autoRedeploy = true
+
+# The worlds to auto-register the addon dependencies (world_behavior_packs.json / world_resource_packs.json)
+# If empty, the plugin will attempt to register with all discovered worlds in the worlds/ folder.
+worlds = []
+
+# The port to run the web dashboard FastAPI/Uvicorn server on.
+port = 9020
+
+# Tebex Secret Key for the built-in API poller (leave empty to disable)
+tebexSecretKey = ""
+

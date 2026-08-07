@@ -1,0 +1,17 @@
+{
+  "name": "shulker-studio-addon",
+  "version": "1.0.0",
+  "description": "Script API addon for Shulker Studio",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --outfile=../src/shulker_studio/addons/shulker_studio_bp/scripts/main.js --platform=neutral --format=esm --external:@minecraft/server --external:@minecraft/server-ui",
+    "watch": "esbuild src/main.ts --bundle --watch --outfile=../src/shulker_studio/addons/shulker_studio_bp/scripts/main.js --platform=neutral --format=esm --external:@minecraft/server --external:@minecraft/server-ui"
+  },
+  "dependencies": {
+    "@minecraft/server": "^2.10.0-beta.1.26.40-preview.20"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "typescript": "^5.0.0"
+  }
+}

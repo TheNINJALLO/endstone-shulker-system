@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "endstone-shulker-system"
+version = "0.1.17"
+description = "Shulker Studios management platform"
+authors = [
+    { name = "Ninjo" }
+]
+dependencies = [
+    "endstone>=0.11.8,<0.12",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0"
+]
+requires-python = ">=3.11"
+
+[project.entry-points."endstone"]
+"shulker-system" = "shulker_studio.plugin:ShulkerStudio"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+shulker_studio = [
+    "config.toml",
+    "vanilla_items.json",
+    "dashboard/dist/**/*",
+    "addons/**/*"
+]

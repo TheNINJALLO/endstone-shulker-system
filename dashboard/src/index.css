@@ -1,0 +1,56 @@
+:root {
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Color Palette - Premium Matte Slate Theme */
+  --bg-base: 220 18% 7%;
+  --bg-surface: 222 33% 10%;
+  --bg-surface-elevated: 222 30% 14%;
+  --border-color: 220 13% 18%;
+  
+  --primary: 221 83% 53%;
+  --primary-hover: 221 90% 60%;
+  --primary-glow: hsla(221, 83%, 53%, 0.08);
+  
+  --success: 142 69% 43%;
+  --success-glow: hsla(142, 69% ,43%, 0.08);
+  
+  --error: 0 72% 51%;
+  --error-glow: hsla(0, 72%, 51%, 0.08);
+  
+  --warning: 38 92% 50%;
+  --warning-glow: hsla(38, 92%, 50%, 0.08);
+
+  --text-primary: 210 40% 98%;
+  --text-secondary: 215 15% 72%;
+  --text-muted: 215 12% 52%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: hsl(var(--bg-base));
+  color: hsl(var(--text-primary));
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg-base));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border-color));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--text-muted));
+}
