@@ -20,8 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="#overview">Overview</a> &bull;
-  <a href="#compatibility">Compatibility</a> &bull;
+  <a href="#what-it-does">What it does</a> &bull;
+  <a href="#how-to-use">How to use</a> &bull;
+  <a href="#commands-and-permissions">Commands</a> &bull;
   <a href="#install">Install</a> &bull;
   <a href="https://github.com/TheNINJALLO/endstone-shulker-system/releases">Releases</a>
 </p>
@@ -30,11 +31,24 @@
 
 Shulker Studios management platform. This release is aligned with Endstone 0.11.8 and Minecraft Bedrock Dedicated Server 1.26.40, and is distributed as a Python wheel for direct installation in an Endstone server.
 
-## Capabilities
+## What it does
 
-- Shulker Studios management and deployment workflows
-- Dashboard-backed administration
-- Tebex polling and reward delivery integration
+- Scans addon content, manages deployment, and serves a Shulker Studios administration dashboard.
+- Schedules and delivers player rewards through Script Events with persistent delivery tracking.
+- Polls Tebex for purchases and turns approved packages into in-game deliveries.
+
+## How to use
+
+1. Start once, then review addon deployment targets, world selection, dashboard port, and development/production mode.
+2. Store the Tebex secret only in the local runtime configuration and restrict dashboard port `9020` (or your configured port) at the firewall/reverse proxy.
+3. Use the dashboard to scan/deploy content and test a delivery with a staging package.
+4. Configure Tebex to execute `/shulkertebex <player> <package_name>` through the server console only.
+
+## Commands and permissions
+
+| Command / usage | What it does | Access |
+|---|---|---|
+| `/shulkertebex <player> <package_name>` | Handle Tebex donations and deliveries | Server console only |
 
 ## Compatibility
 
