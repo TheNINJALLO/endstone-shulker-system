@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "endstone-shulker-system"
-version = "0.1.17"
+version = "0.1.18"
 description = "Shulker Studios management platform"
 authors = [
     { name = "Ninjo" }
 ]
 dependencies = [
-    "endstone>=0.11.8,<0.12",
+    "endstone>=0.11.9,<0.12",
     "fastapi>=0.100.0",
     "uvicorn>=0.20.0"
 ]
