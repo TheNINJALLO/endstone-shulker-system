@@ -33,16 +33,15 @@ Shulker Studios management platform. This release is aligned with Endstone 0.11.
 
 ## What it does
 
-- Scans server content packs and serves a Shulker Studios administration dashboard.
-- Authors all 27 shulker slots through the native BlockData service, verifies the result, and delivers the resulting item without a helper behavior pack.
-- Schedules and queues player rewards with atomic, persistent delivery tracking.
+- Scans addon content, manages deployment, and serves a Shulker Studios administration dashboard.
+- Schedules and delivers player rewards through Script Events with persistent delivery tracking.
 - Polls Tebex for purchases and turns approved packages into in-game deliveries.
 
 ## How to use
 
-1. Install a BlockData build that matches Endstone `0.11.14` and BDS `1.26.52.3`, then install Shulker Studios and restart the server.
+1. Start once, then review addon deployment targets, world selection, dashboard port, and development/production mode.
 2. Store the Tebex secret only in the local runtime configuration and restrict dashboard port `9020` (or your configured port) at the firewall/reverse proxy.
-3. Use the dashboard to scan content and test a delivery with a staging package.
+3. Use the dashboard to scan/deploy content and test a delivery with a staging package.
 4. Configure Tebex to execute `/shulkertebex <player> <package_name>` through the server console only.
 
 ## Commands and permissions
@@ -59,18 +58,17 @@ Shulker Studios management platform. This release is aligned with Endstone 0.11.
 | Endstone API | `0.11` |
 | Bedrock Dedicated Server | `1.26.52.3` |
 | Python | `>=3.11` |
-| BlockData | Exact adapter with `block_entity_nbt`, `item_user_nbt`, and `inventory` capabilities |
-| Plugin release | `v0.2.0` |
+| Plugin release | `v0.1.18` |
 
 ## Install
 
-Install the matching [BlockData API](https://github.com/TheNINJALLO/endstone-blockdata-api) wheel first. Then download the Shulker Studios wheel:
+Download the wheel from the matching GitHub release:
 
 ```bash
-gh release download v0.2.0 --repo TheNINJALLO/endstone-shulker-system --pattern "*.whl"
+gh release download v0.1.18 --repo TheNINJALLO/endstone-shulker-system --pattern "*.whl"
 ```
 
-Copy both wheels into the server's `plugins/` directory, remove older wheels for either plugin, and restart Endstone. Shulker Studios declares `blockdata_api` as a hard dependency and will not enable before it.
+Copy the downloaded wheel into the server's `plugins/` directory, remove any older wheel for the same plugin, and restart Endstone.
 
 > [!IMPORTANT]
 > Use Endstone `0.11.14` with BDS `1.26.52.3`. Back up worlds and plugin data before upgrading a production server.
