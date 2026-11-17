@@ -1,3 +1,7 @@
+[Download compatibility release v0.1.19](https://github.com/TheNINJALLO/endstone-shulker-system/releases/tag/v0.1.19).
+
+> Compatibility release **0.1.19** targets **Endstone 0.11.16 / BDS 1.26.65.1**, protocol **2225**, Python **3.11+**. This release contains the SDK compatibility update; existing local feature drafts are retained separately.
+
 <!-- endstone-professional-header:start -->
 <p align="center">
   <img src="docs/assets/banner.svg" width="100%" alt="Endstone Shulker System &mdash; Shulker Studios management platform">
